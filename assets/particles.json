@@ -8,7 +8,7 @@
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#f84036"
     },
     "shape": {
       "type": "circle",
@@ -20,9 +20,9 @@
         "nb_sides": 5
       },
       "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
+        "src": "assets/devent_white_red.svg",
+        "width": 800,
+        "height": 800
       }
     },
     "opacity": {
