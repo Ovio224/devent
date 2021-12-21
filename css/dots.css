@@ -1,36 +1,60 @@
-
-*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
-.clearfix:before, .clearfix:after { content: ''; display: table; }
-.clearfix:after { clear: both; }
+/* /* ---- reset ---- */
 
 body {
-    background: #fff;
-    color: #383a3c;
-    font-weight: 300;
-    font-size: 1em;
-    line-height: 1.25;
-    font-family: 'Lato', sans-serif;
+    margin: 0;
+    font: normal 75% Arial, Helvetica, sans-serif;
 }
 
-a, button {
-    outline: none;
+canvas {
+    display: block;
+    vertical-align: bottom;
 }
 
-a {
-    color: #566473;
-    text-decoration: none;
+/* ---- particles.js container ---- */
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f84036;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
-a:hover, a:focus {
-    color: #34495e;
+/* ---- stats.js ---- */
+
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 
-section {
-    padding: 1em;
-    text-align: center;
+.js-count-particles {
+    font-size: 1.1em;
 }
 
-p.ref {
-    text-align: center;
-    padding: 2em 1em;
+#stats,
+.count-particles {
+    -webkit-user-select: none;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
 }
