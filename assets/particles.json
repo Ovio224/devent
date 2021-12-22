@@ -14,10 +14,10 @@
       "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#000000"
+        "color": "#fcfcfc"
       },
       "polygon": {
-        "nb_sides": 5
+        "nb_sides": 4
       },
       "image": {
         "src": "assets/devent_white.svg",
@@ -26,7 +26,7 @@
       }
     },
     "opacity": {
-      "value": 0.2,
+      "value": 0.5,
       "random": false,
       "anim": {
         "enable": true,
@@ -82,7 +82,7 @@
     },
     "modes": {
       "grab": {
-        "distance": 140,
+        "distance": 300,
         "line_linked": {
           "opacity": 1
         }
@@ -95,7 +95,7 @@
         "speed": 3
       },
       "repulse": {
-        "distance": 200,
+        "distance": 250,
         "duration": 0.4
       },
       "push": {
