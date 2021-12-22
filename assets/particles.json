@@ -3,8 +3,8 @@
     "number": {
       "value": 150,
       "density": {
-        "enable": false,
-        "value_area": 800
+        "enable": true,
+        "value_area": 150
       }
     },
     "color": {
