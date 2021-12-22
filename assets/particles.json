@@ -1,6 +1,5 @@
 {
   "particles": {
-    "density_auto": true,
     "number": {
       "value": 150,
       "density": {
@@ -69,6 +68,10 @@
     }
   },
   "interactivity": {
+    "onresize": {
+      "density_auto": true,
+      "density_area": 10
+    },
     "detect_on": "canvas",
     "events": {
       "onhover": {
