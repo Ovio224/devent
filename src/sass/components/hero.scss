@@ -1,0 +1,242 @@
+.hero {
+  background: #fff;
+
+  .container {
+    @media (min-width: 360px) {
+      padding: 0 30px;
+    }
+    @media (min-width: 768px) {
+      padding: 0 100px;
+    }
+    @media (min-width: 1024px) {
+      padding: 0 120px;
+    }
+    @media (min-width: 1200px) {
+      padding: 0 150px;
+    }
+    @media (min-width: 1350px) {
+      padding: 0 180px;
+    }
+    @media (min-width: 1600px) {
+      padding: 0 220px;
+    }
+    @media (min-width: 1800px) {
+      padding: 0 270px;
+    }
+
+    .hero-inner {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      justify-content: center;
+
+      .hero-inner-col {
+        &.left {
+          display: none;
+        }
+
+        &.right {
+        }
+
+        .hero-inner-title {
+          z-index: 11;
+          position: relative;
+
+          h1 {
+            margin: 0;
+            font-weight: bold;
+            @media (min-width: 1800px) {
+              font-size: 28px;
+            }
+          }
+        }
+
+        .hero-inner-links {
+          z-index: 11;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+
+          .hero-inner-link-item {
+            .hero-inner-link-item-padding {
+              //position: relative;
+
+              &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 28vh;
+                bottom: 1vh;
+                left: -30vh;
+                right: -45vh;
+              }
+            }
+
+            a,
+            div {
+              //padding: 12px 22px;
+              display: inline-block;
+              position: relative;
+              overflow: hidden;
+              text-decoration: none;
+              color: black;
+              transition: color 0.3s, -webkit-text-stroke 0.3s;
+              //-webkit-text-stroke: 1px #000;
+
+              &:hover {
+                color: black;
+                //-webkit-text-stroke: 1px transparent;
+              }
+
+              span {
+                line-height: 1;
+                font-weight: 700;
+                text-shadow: none;
+                font-size: 5.5vw;
+                letter-spacing: -6px;
+              }
+            }
+
+            &:first-child {
+              a {
+                padding-left: 0;
+              }
+            }
+
+            &:last-child {
+              a {
+                padding-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .hero-inner-footer {
+      .hero-inner-footer-text {
+        //display: flex;
+        //align-items: flex-start;
+        //justify-self: center;
+        //justify-content: space-around;
+        //flex-wrap: nowrap;
+        //flex-direction: row;
+        //text-align: left;
+
+        p {
+          font-size: 2.8rem;
+          margin-top: -20vh;
+          width: 80%;
+          line-height: 4.4rem;
+        }
+      }
+    }
+  }
+}
+
+.-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50vw, 25vh);
+
+  // Circles
+  &.-v1 {
+    width: 50vw;
+    height: 50vw;
+    margin: (-50vw / 2) 0 0 (-50vw / 2);
+
+    border-radius: 50%;
+    background: #4945dc;
+  }
+
+  &.-v2 {
+    width: 35vw;
+    height: 35vw;
+    margin: (-35vw / 2) 0 0 (-35vw / 2);
+
+    border-radius: 50%;
+    background: #bfe7d1;
+  }
+
+  &.-v3 {
+    width: 20vw;
+    height: 20vw;
+    margin: (-20vw / 2) 0 0 (-20vw / 2);
+
+    border-radius: 50%;
+    background: #ebd079;
+  }
+
+  &.-v5 {
+    width: 0;
+    height: 0;
+    margin: (-450px / 2) 0 0 -400px;
+
+    border-style: solid;
+    border-width: 0 400px 450px 400px;
+    border-color: transparent transparent #ff9b73 transparent;
+  }
+
+  &.-v6 {
+    width: 0;
+    height: 0;
+    margin: (-250px / 2) 0 0 -200px;
+
+    border-style: solid;
+    border-width: 0 200px 250px 200px;
+    border-color: transparent transparent #ffc972 transparent;
+  }
+
+  // Stack circles
+  &.-v7 {
+    width: 18vw;
+    height: 18vw;
+    margin: (-18vw / 2) 0 0 (-18vw / 2);
+
+    border-radius: 50%;
+    background: #ff4163;
+
+    &:nth-child(2n) {
+      background: #fed9ef;
+    }
+  }
+
+  // Squares
+  &.-v8 {
+    width: 20vw;
+    height: 30vw;
+    margin: (-30vw / 2) 0 0 (-20vw / 2);
+
+    background: #dfe5ee;
+  }
+
+  &.-v9 {
+    width: 20vw;
+    height: 25vw;
+    margin: (-25vw / 2) 0 0 (-20vw / 2);
+
+    background: #e9cbb4;
+  }
+
+  // Jelly blob
+  &.jelly {
+    width: 25vw;
+    height: 25vw;
+    margin: (-25vw / 2) 0 0 (-25vw / 2);
+
+    border-radius: 50%;
+    //background:#B095F7;
+  }
+
+  // Stack single color
+  &.-v11 {
+    width: 15vw;
+    height: 15vw;
+    margin: (-15vw / 2) 0 0 (-15vw / 2);
+
+    border-radius: 50%;
+    background: #b692fe;
+  }
+}
