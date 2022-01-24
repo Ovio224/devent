@@ -1,15 +1,15 @@
-import NumberedHeader from "./components/NumberedHeader";
+import NumberedHeader from "./Landing/components/NumberedHeader";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import React from "react";
-import { Column } from "./components/Column";
-import { Features } from "../Features/Features";
+import { Column } from "./Landing/components/Column";
 import { Heading } from "@chakra-ui/react";
-import { Container } from "../Generic/Container";
-import { ColumnInverse } from "./components/ColumnInverse";
-import { ColumnThree } from "./components/ColumnThree";
-import { Pricing } from "../Pricing/Pricing";
-import Technologies from "../Technologies/Technologies";
+import { Container } from "./Generic/Container";
+import { ColumnInverse } from "./Landing/components/ColumnInverse";
+import { ColumnThree } from "./Landing/components/ColumnThree";
+import { Pricing } from "./Pricing/Pricing";
+import Technologies from "./Technologies/Technologies";
+import { Services } from "./Services";
 
 const HeadingContainer = styled(motion.div)`
   display: flex;

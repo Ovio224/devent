@@ -7,7 +7,7 @@ import animationData from "../assets/lotties/hero.json";
 import { Box, Button } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { device } from "../constants";
-import { LandingBody } from "./Landing/LandingBody";
+import { LandingBody } from "./LandingBody";
 
 const SubHeader = styled(motion.div)`
   line-height: 1.6em !important;
@@ -116,7 +116,7 @@ export const Hero = () => {
                 // fontSize={"1.25rem"}
                 fontSize="var(--chakra-fontSizes-3xl)"
               >
-                $50
+                $97.99
               </GradientText>{" "}
               per month.
             </SubHeader>

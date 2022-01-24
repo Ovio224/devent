@@ -282,16 +282,21 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
+    label: "Portfolio",
     children: [
       {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
+        label: "Explore our work",
+        subLabel: "Coming soon",
         href: "#",
       },
       {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
+        label: "UI/UX Design services",
+        subLabel: "Coming soon",
+        href: "#",
+      },
+      {
+        label: "Web development services",
+        subLabel: "Coming soon",
         href: "#",
       },
     ],
@@ -300,12 +305,4 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "About",
     href: "/about",
   },
-  {
-    label: "Work",
-    href: "#",
-  },
-  // {
-  //   label: "Contact",
-  //   href: "#",
-  // },
 ];

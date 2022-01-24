@@ -9,11 +9,14 @@ import {
   FormControl,
   FormLabel,
   Heading,
+  HStack,
   Input,
   Stack,
   Text,
   Textarea,
   useColorModeValue as mode,
+  useRadio,
+  useRadioGroup,
   useToast,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
@@ -29,6 +32,19 @@ export default function Contact() {
   const handleChangeDescription = (event) => setDescription(event.target.value);
   const toast = useToast();
 
+  const options = ["$97.99/m", "$149.99/m"];
+
+  const {
+    getRootProps,
+    getRadioProps,
+    value: radioValue,
+  } = useRadioGroup({
+    name: "framework",
+    defaultValue: "$149.99/m",
+  });
+
+  const group = getRootProps();
+
   const submitForm = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -37,6 +53,7 @@ export default function Contact() {
         name,
         email,
         description,
+        plan: radioValue,
       })
       .then(() => {
         toast({
@@ -98,18 +115,9 @@ export default function Contact() {
                 lg: "760px",
               }}
             >
-              {/*<GradientText*/}
-              {/*  // fontSize="2.5rem"*/}
-              {/*  fontWeight={400}*/}
-              {/*  startColor="#FF4D4D"*/}
-              {/*  endColor="#F9CB28"*/}
-              {/*>*/}
-              {/*  We design amazing*/}
-              {/*</GradientText>*/}
               <Heading
                 as="h1"
                 size="4xl"
-                // color={mode("blue.600", "blue.300")}
                 mt="2"
                 fontWeight="700"
                 letterSpacing="tight"
@@ -140,6 +148,7 @@ export default function Contact() {
                 <FormControl>
                   <FormLabel htmlFor="email">Name & Company</FormLabel>
                   <Input
+                    _placeholder={{ color: "#00000026" }}
                     value={name}
                     onChange={handleChangeName}
                     required
@@ -157,6 +166,7 @@ export default function Contact() {
                 <FormControl>
                   <FormLabel htmlFor="email">Email address</FormLabel>
                   <Input
+                    _placeholder={{ color: "#00000026" }}
                     value={email}
                     onChange={handleChangeEmail}
                     required
@@ -172,8 +182,21 @@ export default function Contact() {
                   />
                 </FormControl>{" "}
                 <FormControl>
+                  <HStack {...group}>
+                    {options.map((value) => {
+                      const radio = getRadioProps({ value });
+                      return (
+                        <RadioCard key={value} {...radio}>
+                          {value}
+                        </RadioCard>
+                      );
+                    })}
+                  </HStack>
+                </FormControl>
+                <FormControl>
                   <FormLabel htmlFor="email">Project Description</FormLabel>
                   <Textarea
+                    _placeholder={{ color: "#00000026" }}
                     value={description}
                     onChange={handleChangeDescription}
                     required
@@ -225,5 +248,39 @@ export default function Contact() {
         </Container>
       </Box>
     </CustomContainer>
+  );
+}
+
+function RadioCard(props) {
+  const { getInputProps, getCheckboxProps } = useRadio(props);
+
+  const input = getInputProps();
+  const checkbox = getCheckboxProps();
+
+  return (
+    <Box width="100%" textAlign="center" as="label">
+      <input {...input} />
+      <Box
+        {...checkbox}
+        cursor="pointer"
+        borderWidth="1px"
+        borderRadius="md"
+        boxShadow="md"
+        _hover={{ background: 'white' }}
+        _checked={{
+          bg: "black",
+          color: "white",
+          borderColor: "teal.600",
+        }}
+        _focus={{
+          boxShadow: "outline",
+        }}
+        transition="background 0.2s"
+        px={5}
+        py={3}
+      >
+        {props.children}
+      </Box>
+    </Box>
   );
 }

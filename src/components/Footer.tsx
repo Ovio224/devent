@@ -18,7 +18,7 @@ export const Footer = () => {
 
   return (
     <div>
-      {!isContactPage ? ContactUsCTA : null}
+      {!isContactPage ? <ContactUsCTA /> : null}
       <div className="footer">
         <div className="footer-row max-possible-width-constraint">
           <div className="footer-column">
@@ -125,7 +125,7 @@ export const ContactUsCTA = ({ showButton = true }) => (
       <span className="big-header">Do you have a</span>
       <span className="big-header gradient">cool idea?</span>
       {showButton ? (
-        <Link to="/">
+        <a href="/contact">
           <Button
             rightIcon={<ArrowForwardIcon />}
             colorScheme="pink"
@@ -141,7 +141,7 @@ export const ContactUsCTA = ({ showButton = true }) => (
           >
             Tell us about it
           </Button>
-        </Link>
+        </a>
       ) : null}
     </div>
     <Lottie
