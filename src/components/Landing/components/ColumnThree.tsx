@@ -1,7 +1,6 @@
 import {
   Box,
   Center,
-  Divider,
   Heading,
   Stack,
   Text,
@@ -13,7 +12,6 @@ import animationData from "../../../assets/lotties/column-4.json";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import GradientText from "../../Generic/GradientText";
-
 
 const ColoredSpan = styled(motion.span)`
   color: #ff5b4f;
@@ -44,7 +42,7 @@ export const ColumnThree = () => {
         }
       >
         <Stack
-            mb={20}
+          mb={20}
           spacing={{
             base: "4",
             lg: "20",
@@ -90,7 +88,8 @@ export const ColumnThree = () => {
               pricing for your growing business
             </Heading>
             <Text fontSize="lg" mt="6" color={mode("gray.600", "gray.400")}>
-              <ColoredSpan>$0</ColoredSpan> down for a standard 5 page <ColoredSpan>small business website</ColoredSpan>. If you need
+              <ColoredSpan>$0</ColoredSpan> down for a standard 5 page{" "}
+              <ColoredSpan>small business website</ColoredSpan>. If you need
               more than that then we have to do custom pricing based on the
               scope of work, number of additional pages, and time involved.
             </Text>

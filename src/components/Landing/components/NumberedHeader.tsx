@@ -21,7 +21,7 @@ const NumberedHeader = ({
   width = "40px",
   height = "40px",
   color = "#fff",
-  fontSize = '1.5rem',
+  fontSize = "1.5rem",
   fontWeight = undefined,
   // number,
   children,
@@ -55,8 +55,7 @@ const NumberedHeader = ({
       <Section>
         {/*<Number>{number}</Number>*/}
         <h3>
-          <span
-          >
+          <span>
             <GradientText
               fontSize={fontSize}
               fontWeight={fontWeight}

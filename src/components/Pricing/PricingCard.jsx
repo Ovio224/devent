@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  createIcon,
   List,
   ListItem,
   Text,
@@ -9,11 +8,6 @@ import {
 } from "@chakra-ui/react";
 import * as React from "react";
 import { ArrowForwardIcon, CheckCircleIcon } from "@chakra-ui/icons";
-
-const CheckIcon = createIcon({
-  viewBox: "0 0 17 12",
-  d: "M0 5.82857L1.64571 4.11429L5.48571 7.2L14.8114 0L16.4571 1.71429L5.48571 12L0 5.82857Z",
-});
 
 const PricingDetail = (props) => {
   const { children, iconColor, ...rest } = props;
@@ -121,36 +115,38 @@ export const PricingCard = (props) => {
         margin="2rem -3rem -3rem -3rem"
         bg="white"
       >
-        <Button
-          borderRadius={5}
-          iconSpacing="3"
-          rightIcon={
-            <Box
-              as={ArrowForwardIcon}
-              fontSize="xl"
-              transition="transform 0.2s"
-              _groupHover={{
-                transform: "translateX(2px)",
-              }}
-            />
-          }
-          width={"xs"}
-          // padding="0 8rem 0 8rem"
-          my="8"
-          size="lg"
-          bg={mainColor}
-          _hover={{
-            border: `1px solid ${mainColor}`,
-            color: mainColor,
-            bg: "white",
-          }}
-          fontSize="md"
-          colorScheme={"whiteAlpha"}
-          onClick={onClick}
-          textAlign="left"
-        >
-          Contact us
-        </Button>
+        <a href="/contact">
+          <Button
+            borderRadius={5}
+            iconSpacing="3"
+            rightIcon={
+              <Box
+                as={ArrowForwardIcon}
+                fontSize="xl"
+                transition="transform 0.2s"
+                _groupHover={{
+                  transform: "translateX(2px)",
+                }}
+              />
+            }
+            width={"xs"}
+            // padding="0 8rem 0 8rem"
+            my="8"
+            size="lg"
+            bg={mainColor}
+            _hover={{
+              border: `1px solid ${mainColor}`,
+              color: mainColor,
+              bg: "white",
+            }}
+            fontSize="md"
+            colorScheme={"whiteAlpha"}
+            onClick={onClick}
+            textAlign="left"
+          >
+            Contact us
+          </Button>
+        </a>
       </Box>
     </Box>
   );
