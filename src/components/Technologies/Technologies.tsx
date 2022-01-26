@@ -29,14 +29,24 @@ const features = [
 export default function Technologies() {
   return (
     <Box mt="8rem" mb="2rem" p={4}>
-      <Stack mb="4rem" spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
+      <Stack
+        mb="4rem"
+        spacing={4}
+        as={Container}
+        maxW={"3xl"}
+        textAlign={"center"}
+      >
         <Heading data-cursor="-opaque" letterSpacing="tight" as="h1" size="3xl">
           Technologies we use to build your digital experience
         </Heading>
       </Stack>
 
-      <Container maxW={"6xl"} mt='2rem'>
-        <SimpleGrid data-cursor="-opaque" columns={{ base: 1, md: 2, lg: 4 }} spacing={8}>
+      <Container maxW={"6xl"} mt="2rem">
+        <SimpleGrid
+          data-cursor="-opaque"
+          columns={{ base: 1, md: 2, lg: 4 }}
+          spacing={8}
+        >
           {features.map((feature) => (
             <HStack
               display="flex"
@@ -47,6 +57,8 @@ export default function Technologies() {
               align={"top"}
             >
               <Image
+                width={70}
+                height={70}
                 objectPosition={`50% 50%`}
                 boxSize="70px"
                 mb="16px"
@@ -54,7 +66,12 @@ export default function Technologies() {
                 src={feature.src}
                 alt="Dan Abramov"
               />
-              <Text fontWeight={510} fontSize="18px" margin={0} marginInlineStart={'0 !important'}>
+              <Text
+                fontWeight={510}
+                fontSize="18px"
+                margin={0}
+                marginInlineStart={"0 !important"}
+              >
                 {feature.title}
               </Text>
             </HStack>

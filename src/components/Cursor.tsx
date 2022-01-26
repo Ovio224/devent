@@ -13,22 +13,6 @@ export const Cursor = () => {
             loop
             id="websites"
           />
-          <video
-            src="../videos/apps.mp4"
-            preload="auto"
-            autoPlay
-            muted
-            loop
-            id="apps"
-          />
-          <video
-            src="../videos/branding.mp4"
-            preload="auto"
-            autoPlay
-            muted
-            loop
-            id="branding"
-          />
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
@@ -12,18 +11,18 @@ const theme = extendTheme({
     body: "Zona Pro",
   },
   body: {
-    bg: "#fafafa",
+    bg: "#fff",
     color: "white",
   },
 });
 
 ReactDOM.render(
   // <React.StrictMode>
-  <BrowserRouter>
-    <ChakraProvider theme={theme}>
+  <ChakraProvider theme={theme}>
+    <BrowserRouter>
       <App />
-    </ChakraProvider>
-  </BrowserRouter>,
+    </BrowserRouter>
+  </ChakraProvider>,
   // </React.StrictMode>,
   document.getElementById("root")
 );

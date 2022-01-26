@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container as CustomContainer } from "./Generic/Container";
 import {
   Box,
@@ -33,6 +33,10 @@ export default function Contact() {
   const toast = useToast();
 
   const options = ["$97.99/m", "$149.99/m"];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const {
     getRootProps,
@@ -156,7 +160,7 @@ export default function Contact() {
                     focusBorderColor={"#de1d8d"}
                     shadow="0px 2px 7px rgb(0 0 0 / 7%)"
                     size="lg"
-                    width="20vw"
+                    width="25vw"
                     bg="white"
                     id="name"
                     type="name"
@@ -174,7 +178,7 @@ export default function Contact() {
                     focusBorderColor={"#de1d8d"}
                     shadow="0px 2px 7px rgb(0 0 0 / 7%)"
                     size="lg"
-                    width="20vw"
+                    width="25vw"
                     bg="white"
                     id="email"
                     type="email"
@@ -204,8 +208,8 @@ export default function Contact() {
                     focusBorderColor={"#de1d8d"}
                     shadow="0px 2px 7px rgb(0 0 0 / 7%)"
                     size="lg"
-                    width="20vw"
-                    height="10vh"
+                    width="25vw"
+                    height="20vh"
                     bg="white"
                     id="message"
                     type="message"
@@ -266,7 +270,7 @@ function RadioCard(props) {
         borderWidth="1px"
         borderRadius="md"
         boxShadow="md"
-        _hover={{ background: 'white' }}
+        _hover={{ background: "white" }}
         _checked={{
           bg: "black",
           color: "white",

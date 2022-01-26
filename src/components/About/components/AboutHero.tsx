@@ -1,26 +1,19 @@
 import {
   Box,
-  Button,
   Heading,
-  Img,
-  Link,
   Stack,
   Text,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import * as React from "react";
-import { HiPlay } from "react-icons/hi";
 import GradientText from "../../Generic/GradientText";
-import animationData from '../../../assets/lotties/wave.json'
+import animationData from "../../../assets/lotties/wave.json";
 import Lottie from "react-lottie";
 
 const defaultOptions = {
   loop: true,
   autoplay: true,
   animationData,
-  // rendererSettings: {
-  //   preserveAspectRatio: "xMidYMid slice",
-  // },
 };
 
 export default function AboutHero() {

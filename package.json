@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm i -D --save-exact mini-css-extract-plugin@2.4.5 && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "preinstall": "npx npm-force-resolutions && node preinstallHotfix"
+    "eject": "react-scripts eject"
   },
-  "overrides": {
+  "resolutions": {
     "mini-css-extract-plugin": "2.4.5"
   },
   "dependencies": {
@@ -28,16 +27,18 @@
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "smooth-scrollbar": "^8.7.0",
+    "swiper": "^6.7.1",
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.3"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "@types/jquery": "^3.5.13",
     "@types/node": "^16.11.19",
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
     "jquery": "^3.6.0",
+    "mini-css-extract-plugin": "2.4.5",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.5.1",
     "sass": "^1.26.11",

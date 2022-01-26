@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC, useEffect } from "react";
 import Lottie from "react-lottie";
-import { Button } from "@chakra-ui/react";
+import { Button, useForceUpdate } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import animationData from "../assets/lotties/footer.json";
 import { Link } from "react-router-dom";
@@ -15,10 +15,23 @@ const defaultOptions = {
 };
 export const Footer = () => {
   const isContactPage = window.location.href.includes("/contact");
+  //   const q = useForceUpdate()
+  //
+  // useEffect(() => {
+  //   q()
+  // }, [])
 
   return (
     <div>
-      {!isContactPage ? <ContactUsCTA /> : null}
+      {!isContactPage ? (
+        <ContactUsCTA />
+      ) : (
+        <ContactUsCTA
+          headerText={"Looking forward to read"}
+          gradientText={"your ideas :)"}
+          showButton={false}
+        />
+      )}
       <div className="footer">
         <div className="footer-row max-possible-width-constraint">
           <div className="footer-column">
@@ -100,7 +113,15 @@ export const Footer = () => {
                 className="footer-text footer-link"
                 href="https://wa.me/40745884215?text=Hi%20Ovi,%20I%20want%20you%20to%20help%20me%20with"
               >
-                Whatsapp
+                Text us
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="footer-text footer-link"
+                href="mailto:deventinfo@gmail.com"
+              >
+                Email us
               </a>
               <a
                 className="footer-text phone footer-link"
@@ -119,11 +140,22 @@ export const Footer = () => {
   );
 };
 
-export const ContactUsCTA = ({ showButton = true }) => (
+interface IContactUsCTAProps {
+  showButton?: boolean;
+  headerText?: string;
+  gradientText?: string;
+}
+export const ContactUsCTA: FC<IContactUsCTAProps> = ({
+  showButton = true,
+  headerText,
+  gradientText,
+}) => (
   <div className="footer-contact max-possible-width-constraint">
     <div className="contact-container">
-      <span className="big-header">Do you have a</span>
-      <span className="big-header gradient">cool idea?</span>
+      <span className="big-header">{headerText ?? "Wanna do something"}</span>
+      <span className="big-header gradient">
+        {gradientText ?? "amazing?"}
+      </span>
       {showButton ? (
         <a href="/contact">
           <Button
@@ -139,7 +171,7 @@ export const ContactUsCTA = ({ showButton = true }) => (
               paddingRight: "4rem",
             }}
           >
-            Tell us about it
+            Let's talk about it
           </Button>
         </a>
       ) : null}

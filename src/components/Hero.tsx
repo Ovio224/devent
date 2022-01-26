@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GradientText from "./Generic/GradientText";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
@@ -25,7 +25,7 @@ const HeroInnerFooter = styled(motion.div)`
   text-align: left;
 
   @media ${device.laptop} {
-    margin-left: 7%;
+    margin-left: 8%;
   }
   @media ${device.desktop} {
     margin-left: 15%;
@@ -33,20 +33,23 @@ const HeroInnerFooter = styled(motion.div)`
 `;
 
 export const Hero = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
     animationData,
   };
   return (
-    <section className="hero">
+    <section className="hero" id="app">
       <div className="container">
         <div className="hero-inner">
           <div className="hero-inner-banner">
             <div className="hero-inner-col left" />
             <div className="hero-inner-col right">
-              <div className="hero-inner-title">
-              </div>
+              <div className="hero-inner-title"></div>
               <div className="hero-inner-links">
                 <div className="hero-inner-link-item">
                   <div className="hero-inner-link-item-padding" />
@@ -54,7 +57,7 @@ export const Hero = () => {
                     <motion.span
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ delay: 1 }}
+                      transition={{ delay: 0.1 }}
                     >
                       Amazing.
                     </motion.span>
@@ -66,7 +69,7 @@ export const Hero = () => {
                     <motion.span
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ delay: 1.5 }}
+                      transition={{ delay: 0.3 }}
                     >
                       Website.
                     </motion.span>
@@ -77,8 +80,8 @@ export const Hero = () => {
                   data-video-src="websites"
                 >
                   <div className="hero-inner-link-item-padding" />
-                  <a className="bold" href="#">
-                    <GradientText delay={2}>Development.</GradientText>
+                  <a className="bold" href="#marquee">
+                    <GradientText delay={0.5}>Development.</GradientText>
                   </a>
                 </div>
               </div>
@@ -88,7 +91,7 @@ export const Hero = () => {
             className="hide-on-mobile"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.2 }}
+            transition={{ delay: 0.7 }}
           >
             <Lottie
               style={{ cursor: "inherit" }}
@@ -101,19 +104,15 @@ export const Hero = () => {
         <HeroInnerFooter
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2.4 }}
+          transition={{ delay: 0.9 }}
           className="hero-inner-footer"
         >
           <div className="hero-inner-footer-text">
             <SubHeader>
-              I offer amazing website experiences for small businesses.
-              Starting from only{" "}
+              I offer amazing website experiences for small businesses. Starting
+              from only{" "}
               <GradientText
-                data-magnetic
-                // startColor={"#007CF0"}
-                // endColor={"#00DFD8"}
                 fontWeight={700}
-                // fontSize={"1.25rem"}
                 fontSize="var(--chakra-fontSizes-3xl)"
               >
                 $97.99
@@ -122,7 +121,13 @@ export const Hero = () => {
             </SubHeader>
           </div>
           <Button
-            colorScheme="pink"
+            _hover={{
+              border: `1px solid black`,
+              color: "black",
+              bg: "white",
+            }}
+            border="1px solid black"
+            color="white"
             size="md"
             bgColor={"black"}
             className="group"
@@ -131,7 +136,7 @@ export const Hero = () => {
             fontWeight="bold"
             h="14"
             iconSpacing="3"
-            borderRadiu={5}
+            borderRadius={5}
             rightIcon={
               <Box
                 as={ArrowForwardIcon}

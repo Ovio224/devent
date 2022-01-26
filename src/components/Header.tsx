@@ -63,7 +63,7 @@ export const Header = () => {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Box marginLeft={{ md: "20%", xl: "21.8%" }}>
+        <Box marginLeft={{ md: "20%", xl: "21.8%", xxl: "28.6%;" }}>
           <Flex
             flex={{ base: 1 }}
             alignItems={{ base: "center", md: "center", sm: "flex-start" }}
@@ -74,17 +74,14 @@ export const Header = () => {
               fontFamily={"heading"}
               color={useColorModeValue("gray.800", "white")}
             >
-              <RouterLink to="/">
+              <a href="/">
                 <GradientText startColor="#FF4D4D" endColor="#F9CB28">
                   devent.studio
                 </GradientText>
-              </RouterLink>
+              </a>
             </Text>
 
-            <Flex
-              display={{ base: "none", md: "flex" }}
-              ml={{ lg: "65%", xl: "98%" }}
-            >
+            <Flex display={{ base: "none", md: "flex" }}>
               <DesktopNav />
             </Flex>
           </Flex>
@@ -104,7 +101,12 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack alignItems={{ base: "center" }} direction={"row"} spacing={4}>
+    <Stack
+      ml={{ lg: "60rem", xl: "88rem" }}
+      alignItems={{ base: "center" }}
+      direction={"row"}
+      spacing={4}
+    >
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -261,8 +263,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           {children &&
             children.map((child) => (
               // @ts-ignore
-              <RouterLink to={child.href}>
-                <Link key={child.label} py={2} href={child.href}>
+              <RouterLink key={child.label} to={child.href}>
+                <Link py={2} href={child.href}>
                   {child.label}
                 </Link>
               </RouterLink>

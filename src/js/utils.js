@@ -1,6 +1,3 @@
-// Linear interpolation
-const lerp = (a, b, n) => (1 - n) * a + n * b;
-
 // Helpers
 export function getScale(diffX, diffY) {
   const distance = Math.sqrt(
@@ -44,4 +41,4 @@ const getSiblings = (e) => {
   return siblings;
 };
 
-export { lerp, getMousePos, getSiblings };
+export { getMousePos, getSiblings };

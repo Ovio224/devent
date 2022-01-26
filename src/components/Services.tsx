@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Stack, Tag, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Tag } from "@chakra-ui/react";
 import GradientText from "./Generic/GradientText";
 import * as React from "react";
 
@@ -11,7 +11,6 @@ const CustomTag = ({ children }) => (
     mr={8}
     mb={8}
     padding={"12px 24px"}
-    // border={1px solid rgba(102,95,130,.15);
     borderRadius={40}
     fontWeight={700}
   >
@@ -84,6 +83,7 @@ export const Services = () => {
           >
             <Box>
               <CustomTag>Web Development</CustomTag>
+              <CustomTag>Maintenance</CustomTag>
               <CustomTag>E-commerce Websites</CustomTag>
               <CustomTag>Shopify Custom Themes</CustomTag>
               <CustomTag>Shopify Stores</CustomTag>

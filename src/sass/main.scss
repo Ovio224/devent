@@ -6,10 +6,10 @@
 @import "normalize";
 
 // Components
-@import "./components/header.scss";
 @import "./components/cursor.scss";
 @import "./components/hero.scss";
 @import "./components/footer.scss";
+@import "./components/marquee.scss";
 
 *,
 *::after,
@@ -25,6 +25,7 @@
 }
 
 body {
+  //scroll-behavior: smooth;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,6 +37,16 @@ body {
   color: #000;
   background: $color-base;
   font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 20px;
 }
 
 h1 {

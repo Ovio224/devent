@@ -1,98 +1,9 @@
 /* Main Colors */
-$color-base: #dae1e7;
-$color-base-light: #fff;
-
-// Gradient 1
-//--start-color: '#007CF0';
-//--end-color: '#00DFD8';
-
-// Gradient 2
-//startColor = "#7928ca",
-//endColor = "#ff0080",
-
-// Gradient 3
-//startColor={#FF4D4D}
-//endColor={#F9CB28}
-
-$main: #0070f3;
-$second: #de1d8d;
-$tertiary: #ff5b4f;
-$violet: #7928ca;
-
-$geist-success-lighter: #d3e5ff;
-$geist-success-light: #3291ff;
-$geist-success: #0070f3;
-$geist-success-dark: #0761d1;
-$geist-error-lighter: #f7d4d6;
-$geist-error-light: #ff1a1a;
-$geist-error: #e00;
-$geist-error-dark: #c50000;
-$geist-warning-lighter: #ffefcf;
-$geist-warning-light: #f7b955;
-$geist-warning: #f5a623;
-$geist-warning-dark: #ab570a;
-$geist-violet-lighter: #d8ccf1;
-$geist-violet-light: #8a63d2;
-$geist-violet: #7928ca;
-$geist-violet-dark: #4c2889;
-$geist-violet-background: #fff;
-$geist-violet-background-secondary: #291c3a;
-$geist-violet-background-tertiary: #eae5f4;
-$geist-background-rgb: 255, 255, 255;
-$geist-foreground-rgb: 0, 0, 0;
-$geist-console-header: #efe7ed;
-$geist-console-purple: #7928ca;
-$geist-console-text-color-default: var(--geist-foreground);
-$geist-console-text-color-blue: #0070f3;
-$geist-console-text-color-pink: #eb367f;
-$geist-console-text-color-purple: #7928ca;
-$geist-cyan-lighter: #aaffec;
-$geist-cyan-light: #79ffe1;
-$geist-cyan: #50e3c2;
-$geist-cyan-dark: #29bc9b;
-$geist-highlight-purple: #f81ce5;
-$geist-highlight-magenta: #eb367f;
-$geist-highlight-pink: #ff0080;
-$geist-highlight-yellow: #fff500;
-$geist-foreground: #000;
-$geist-background: #fff;
-$geist-selection: var(--geist-cyan-light);
-$accents-1: #fafafa;
-$accents-2: #eaeaea;
-$accents-3: #999;
-$accents-4: #888;
-$accents-5: #666;
-$accents-6: #444;
-$accents-7: #333;
-$accents-8: #111;
-$geist-link-color: var(--geist-success);
-$geist-marketing-gray: #fafbfc;
-$geist-code: var(--geist-highlight-purple);
-$geist-secondary-lighter: var(--accents-2);
-$geist-secondary-light: var(--accents-3);
-$geist-secondary: var(--accents-5);
-$geist-secondary-dark: var(--accents-7);
-$dropdown-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02);
-$dropdown-triangle-stroke: #fff;
-$scroller-start: #fff;
-$scroller-end: hsla(0, 0%, 100%, 0);
-$shadow-smallest: 0px 2px 4px rgba(0, 0, 0, 0.1);
-$shadow-extra-small: 0px 4px 8px rgba(0, 0, 0, 0.12);
-$shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
-$shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
-$shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
-$shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
-$shadow-sticky: 0 12px 10px -10px rgba(0, 0, 0, 0.12);
-$portal-opacity: 0.25;
-$wv-green: #0cce6b;
-$wv-orange: #ffa400;
-$wv-red: #ff4e42;
-
+$color-base: #fff;
 $color-graybase: #000;
 
-$color-primary: #e76f51;
-$color-secondary: #f4a261;
-$color-tertiary: #e9c46a;
+$color-primary: #4e4d8f;
+$color-secondary: #00092b;
 
 $color-smooth: #6f6f6f;
 $color-fill: #eeeeee;
@@ -103,7 +14,7 @@ $color-link: inherit;
 $color-link-hover: inherit;
 
 /* Fonts */
-$font-family: "Montserrat", sans-serif;
+$font-family: "Zona Pro Regular", "Montserrat", sans-serif;
 $font-size: 14px;
 $font-weight: normal;
 $letter-spacing: normal;
@@ -131,17 +42,3 @@ $screen-ml-max: ($screen-xl - 1);
 $screen-xl-min: $screen-xl;
 $screen-xl-max: ($screen-ul - 1);
 $screen-ul-min: $screen-ul;
-
-$white-color: #fff;
-$crimson-color: #e5003d;
-$xiketic-color: #02021e;
-$alice-blue-color: #ddebfa;
-$purple-navy-color: #554f71;
-$medium-blue-color: #3719ca;
-$space-cadet-color: #32344d;
-$dark-salmon-color: #e7a28f;
-$baby-powder-color: #fbfefc;
-$roman-silver-color: #80808e;
-$lavender-gray-color: #cdcbd3;
-$lavender-blue-color: #a6a6c2;
-$deep-shampagne-color: #f9d6ac;

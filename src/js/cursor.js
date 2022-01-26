@@ -2,8 +2,6 @@ import $ from "jquery";
 import gsap from "gsap";
 import { getAngle, getScale, getSiblings } from "./utils";
 
-// let mouse = { x: 0, y: 0 };
-
 export default class Cursor {
   constructor(options) {
     this.options = $.extend(

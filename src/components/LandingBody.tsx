@@ -9,7 +9,7 @@ import { ColumnInverse } from "./Landing/components/ColumnInverse";
 import { ColumnThree } from "./Landing/components/ColumnThree";
 import { Pricing } from "./Pricing/Pricing";
 import Technologies from "./Technologies/Technologies";
-import { Services } from "./Services";
+import Marquee from "./Marquee";
 
 const HeadingContainer = styled(motion.div)`
   display: flex;
@@ -20,6 +20,7 @@ const HeadingContainer = styled(motion.div)`
 export const LandingBody = () => {
   return (
     <>
+      <Marquee />
       <Container>
         <HeadingContainer>
           <NumberedHeader fontSize="2rem">01.</NumberedHeader>

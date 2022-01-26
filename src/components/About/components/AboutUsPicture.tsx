@@ -38,17 +38,28 @@ export default function AboutUsPicture() {
           startColor="#007CF0"
           endColor="#00DFD8"
         >
-          My mission
+          Our mission
         </GradientText>
         <Heading as="h1" size="2xl">
-          Is to make you smile
+          Is to hear "oh wow"
         </Heading>
-        <Text color={"gray.600"}>I swear I'm funny sometimes</Text>
+        <Text fontSize="10" color={"gray.600"}>
+          I wasn't very inspired when I wrote this
+        </Text>
         <Text color={"gray.600"} mt="12" fontSize="lg" fontWeight="medium">
-          I know I'm talking about smiles and I've got the biggest frown in the
-          pic. It's just that when I took the picture, everybody was trying to
-          make me laugh and the photograph was done with it and he only sent me
-          bad pictures
+          I'm Ovi, a 24 yo with a keen passion on making beautiful things
+          happen. I studied IT in Copenhagen, but I still call myself a
+          self-taught developer.
+        </Text>
+        <Text color={"gray.600"} mt="4" fontSize="lg" fontWeight="medium">
+          I've tried many things in those 24 years, but apparently creating
+          beautiful stuff is what gives me back energy, instead of taking it
+          away. But that's how you can be assured that I'll give you a work that
+          I'll be proud of.
+        </Text>
+        <Text color={"gray.600"} mt="4" fontSize="lg" fontWeight="medium">
+          There are a limited number of clients that I'll be taking this year,
+          so make sure to lock in your spot :)
         </Text>
       </Flex>
       <Image
@@ -60,7 +71,7 @@ export default function AboutUsPicture() {
         // boxSize="600px"
         width={450}
         src="../../../../ovi.png"
-        alt="Dan Abramov"
+        alt="Ovidiu C. - DEVENT Founder"
       />
     </Box>
   );

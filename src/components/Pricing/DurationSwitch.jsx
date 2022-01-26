@@ -4,15 +4,15 @@ import {
   createIcon,
   Flex,
   Text,
-  useRadio,
-  useRadioGroup,
   useColorModeValue as mode,
-} from '@chakra-ui/react'
-import { AnimateSharedLayout } from 'framer-motion'
-import * as React from 'react'
-import { ActiveIndicator } from './ActiveIndicator'
+  useRadio,
+} from "@chakra-ui/react";
+import { AnimateSharedLayout } from "framer-motion";
+import * as React from "react";
+import { ActiveIndicator } from "./ActiveIndicator";
+
 const CurvedLine = createIcon({
-  viewBox: '0 0 38 20',
+  viewBox: "0 0 38 20",
   path: (
     <path
       fill="none"
@@ -23,10 +23,11 @@ const CurvedLine = createIcon({
       strokeLinejoin="round"
     />
   ),
-})
+});
 
 export const RadioButton = (props) => {
-  const { getInputProps, getCheckboxProps, getLabelProps, state } = useRadio(props)
+  const { getInputProps, getCheckboxProps, getLabelProps, state } =
+    useRadio(props);
   return (
     <Box as="label" pos="relative" {...getLabelProps()}>
       <input {...getInputProps()} />
@@ -42,47 +43,46 @@ export const RadioButton = (props) => {
         minW="8rem"
         fontWeight="medium"
         _checked={{
-          color: 'black',
-          fontWeight: 'bold',
+          color: "black",
+          fontWeight: "bold",
         }}
       >
         {props.children}
       </Center>
       {state.isChecked && (
         <ActiveIndicator
-          bg={mode('white', 'gray.600')}
+          bg={mode("white", "gray.600")}
           shadow="md"
           layoutId="highlight"
           transition={{
-            duration: '0.1',
+            duration: "0.1",
           }}
         />
       )}
     </Box>
-  )
-}
+  );
+};
 export const DurationSwitcher = (props) => {
-
   return (
     <Box pos="relative">
       <AnimateSharedLayout>
         <Flex
           display="inline-flex"
           align="center"
-          bg={mode('gray.200', 'gray.700')}
+          bg={mode("gray.200", "gray.700")}
           rounded="full"
           {...props.getRootProps(props)}
         >
           <RadioButton
             {...props.getRadioProps({
-              value: 'monthly',
+              value: "monthly",
             })}
           >
             Monthly
           </RadioButton>
           <RadioButton
             {...props.getRadioProps({
-              value: 'yearly',
+              value: "yearly",
             })}
           >
             Yearly
@@ -96,5 +96,5 @@ export const DurationSwitcher = (props) => {
         <CurvedLine fontSize="2.5rem" pos="relative" right="8" bottom="1" />
       </Box>
     </Box>
-  )
-}
+  );
+};
