@@ -31,6 +31,10 @@
       justify-self: center;
       justify-content: center;
 
+      @media (min-width: 1440px) {
+        justify-content: flex-start;
+      }
+
       .hero-inner-col {
         &.left {
           display: none;
@@ -95,6 +99,10 @@
                 text-shadow: none;
                 font-size: 5.5vw;
                 letter-spacing: -6px;
+                @media (min-width: 1440px) {
+                  line-height: 1.19;
+                  letter-spacing: -4px;
+                }
               }
             }
 

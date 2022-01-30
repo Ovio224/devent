@@ -27,6 +27,12 @@ const HeroInnerFooter = styled(motion.div)`
   @media ${device.laptop} {
     margin-left: 8%;
   }
+  
+  @media ${device.laptopL} {
+    margin-left: 0.5%;
+    width: 40%;
+  }
+  
   @media ${device.desktop} {
     margin-left: 15%;
   }
@@ -40,7 +46,7 @@ export const Hero = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData,
+    animationData
   };
   return (
     <section className="hero" id="app">
@@ -124,7 +130,7 @@ export const Hero = () => {
             _hover={{
               border: `1px solid black`,
               color: "black",
-              bg: "white",
+              bg: "white"
             }}
             border="1px solid black"
             color="white"
@@ -143,7 +149,7 @@ export const Hero = () => {
                 fontSize="sm"
                 transition="transform 0.2s"
                 _groupHover={{
-                  transform: "translateX(2px)",
+                  transform: "translateX(2px)"
                 }}
               />
             }
