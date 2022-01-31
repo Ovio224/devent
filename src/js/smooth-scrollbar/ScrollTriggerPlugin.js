@@ -1,10 +1,13 @@
+// import Scrollbar from "smooth-scrollbar";
+import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { Scrollbar } from "swiper";
 
 gsap.registerPlugin(ScrollTrigger);
 
-class ScrollTriggerPlugin extends Scrollbar.ScrollbarPlugin {
+class ScrollTriggerPlugin {
   constructor(scrollbar, options) {
-    super(scrollbar, options);
+    this.scrollbar = scrollbar;
     this.setProxy();
   }
 
