@@ -23,7 +23,14 @@
     position: relative;
     z-index: 11;
     padding-bottom: 10vh;
-
+    span {
+      @media (max-width: $screen-sm-max) {
+        font-size: 5vw;
+      }
+      @media (max-width: $screen-md-max) {
+        font-size: 2vw;
+      }
+    }
     h1,
     h2 {
       position: relative;
@@ -34,7 +41,18 @@
       letter-spacing: -0.02em;
       text-align: center;
       padding: 0rem 6.5rem;
-
+      @media (max-width: $screen-xs-max) {
+        font-size: 10vw;
+        padding: 0;
+      }
+      span {
+        @media (max-width: $screen-xs-max) {
+          font-size: 10vw;
+        }
+        @media (max-width: $screen-md-max) {
+          font-size: 3.5vw;
+        }
+      }
     }
   }
 

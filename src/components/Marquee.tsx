@@ -9,16 +9,15 @@ export default function Marquee() {
           <div className="marquee-content">
             <div className="marquee-main">
               <Box
-                alignItems={{ base: 'center', sm: "flex-start" }}
+                alignItems={{ base: "center", sm: "flex-start" }}
                 flexDirection="column"
                 d="flex"
                 className="marquee-header"
-
               >
-                <Text as="h1" fontSize={{ base: '10vw' }}>
+                <Text as="h1" fontSize={{ base: "10vw" }}>
                   Coming <GradientText fontSize="3.5vw">soon</GradientText>
                 </Text>
-                <Text p="1rem 7rem">
+                <Text p={{ base: "1rem", md: "1rem 7rem" }}>
                   Only <GradientText fontSize="1vw">11</GradientText> spots left
                   this year. Grab yours now.
                 </Text>
