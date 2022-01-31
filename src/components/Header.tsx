@@ -66,6 +66,7 @@ export const Header = () => {
         <Box marginLeft={{ md: "20%", xl: "21.8%", xxl: "28.6%;" }}>
           <Flex
             flex={{ base: 1 }}
+            ml={{ sm: '11.7%' }}
             alignItems={{ base: "center", md: "center", sm: "flex-start" }}
             justify={{ base: "center", md: "start" }}
           >
@@ -102,7 +103,7 @@ const DesktopNav = () => {
 
   return (
     <Stack
-      ml={{ lg: "60rem", xl: "88rem" }}
+      ml={{ base: '20rem', sm: '40rem', lg: "60rem", xl: "88rem" }}
       alignItems={{ base: "center" }}
       direction={"row"}
       spacing={4}
