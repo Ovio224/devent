@@ -18,23 +18,45 @@ const SubHeader = styled(motion.div)`
   text-align: left;
 `;
 
+const MotionBox = motion(Box);
+
+const HeroInnerFooterText = styled(motion.div)`
+  font-size: 2.8rem;
+  margin-top: -20vh;
+  width: 80%;
+  line-height: 4.4rem;
+
+  @media ${device.mobileS} {
+    width: 100%;
+    margin-top: -25vh;
+  }
+`;
 const HeroInnerFooter = styled(motion.div)`
   width: 29%;
   margin-top: -12%;
   margin-bottom: 18%;
   text-align: left;
 
-  @media ${device.laptop} {
-    margin-left: 8%;
+  @media ${device.mobileS} {
+    width: 100%;
+    margin-bottom: 75%;
   }
-  
+
+  @media ${device.tablet} {
+    margin-left: 9%;
+    width: 100%;
+    margin-bottom: 18%;
+  }
+
   @media ${device.laptopL} {
     margin-left: 0.5%;
     width: 40%;
+    margin-top: 5%;
   }
-  
+
   @media ${device.desktop} {
     margin-left: 15%;
+    margin-top: 4%;
   }
 `;
 
@@ -46,10 +68,10 @@ export const Hero = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData
+    animationData,
   };
   return (
-    <section className="hero" id="app">
+    <section className="hero">
       <div className="container">
         <div className="hero-inner">
           <div className="hero-inner-banner">
@@ -93,11 +115,18 @@ export const Hero = () => {
               </div>
             </div>
           </div>
-          <motion.div
+          <MotionBox
             className="hide-on-mobile"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
+            display={{
+              base: "normal",
+              sm: "none",
+              md: "none",
+              lg: "none",
+              xl: "block",
+            }}
           >
             <Lottie
               style={{ cursor: "inherit" }}
@@ -105,32 +134,31 @@ export const Hero = () => {
               height={400}
               width={500}
             />
-          </motion.div>
+          </MotionBox>
         </div>
         <HeroInnerFooter
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
-          className="hero-inner-footer"
         >
-          <div className="hero-inner-footer-text">
+          <HeroInnerFooterText>
             <SubHeader>
               I offer amazing website experiences for small businesses. Starting
               from only{" "}
               <GradientText
                 fontWeight={700}
-                fontSize="var(--chakra-fontSizes-3xl)"
+                fontSize="var(--chakra-fontSizes-2xl)"
               >
                 $97.99
               </GradientText>{" "}
               per month.
             </SubHeader>
-          </div>
+          </HeroInnerFooterText>
           <Button
             _hover={{
               border: `1px solid black`,
               color: "black",
-              bg: "white"
+              bg: "white",
             }}
             border="1px solid black"
             color="white"
@@ -149,7 +177,7 @@ export const Hero = () => {
                 fontSize="sm"
                 transition="transform 0.2s"
                 _groupHover={{
-                  transform: "translateX(2px)"
+                  transform: "translateX(2px)",
                 }}
               />
             }

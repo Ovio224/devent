@@ -9,10 +9,14 @@ import * as React from "react";
 import GradientText from "../../Generic/GradientText";
 import animationData from "../../../assets/lotties/wave.json";
 import Lottie from "react-lottie";
+import { LottieContainer } from "../../Generic/LottieContainer";
 
 const defaultOptions = {
   loop: true,
   autoplay: true,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice'
+  },
   animationData,
 };
 
@@ -39,7 +43,8 @@ export default function AboutHero() {
           align={{
             lg: "center",
           }}
-          justify="space-between"
+          justify={{ base: "space-between", sm: 'center', xl: 'space-between' }}
+          textAlign={{ base: "left", sm: 'center', lg: 'center', xl: 'left' }}
         >
           <Box
             flex="1"
@@ -58,7 +63,6 @@ export default function AboutHero() {
             <Heading
               as="h1"
               size="3xl"
-              // color={mode("blue.600", "blue.300")}
               mt="2"
               fontWeight="700"
               letterSpacing="tight"
@@ -87,32 +91,16 @@ export default function AboutHero() {
               base: "auto",
               lg: "560px",
             }}
+            display={{ base: 'none', sm: 'none', md: 'none', lg: 'none', xl: 'block' }}
           >
+            <LottieContainer>
             <Lottie
               style={{ cursor: "inherit" }}
               options={defaultOptions}
               height={600}
-              width={800}
+              width={550}
             />
-            {/*<Img*/}
-            {/*  w="full"*/}
-            {/*  pos="relative"*/}
-            {/*  zIndex="1"*/}
-            {/*  h={{*/}
-            {/*    lg: "100%",*/}
-            {/*  }}*/}
-            {/*  objectFit="cover"*/}
-            {/*  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhZHklMjB3aXRoJTIwbGFwdG9wfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"*/}
-            {/*  alt="Screening talent"*/}
-            {/*/>*/}
-            {/*<Box*/}
-            {/*  pos="absolute"*/}
-            {/*  w="100%"*/}
-            {/*  h="100%"*/}
-            {/*  top="-4"*/}
-            {/*  left="-4"*/}
-            {/*  bg={mode("gray.200", "gray.700")}*/}
-            {/*/>*/}
+            </LottieContainer>
           </Box>
         </Stack>
       </Box>

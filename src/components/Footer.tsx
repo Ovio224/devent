@@ -1,9 +1,10 @@
 import React, { FC, useEffect } from "react";
 import Lottie from "react-lottie";
-import { Button, useForceUpdate } from "@chakra-ui/react";
+import { Box, Button, useForceUpdate } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import animationData from "../assets/lotties/footer.json";
 import { Link } from "react-router-dom";
+import { LottieContainer } from "./Generic/LottieContainer";
 
 const defaultOptions = {
   loop: true,
@@ -15,11 +16,6 @@ const defaultOptions = {
 };
 export const Footer = () => {
   const isContactPage = window.location.href.includes("/contact");
-  //   const q = useForceUpdate()
-  //
-  // useEffect(() => {
-  //   q()
-  // }, [])
 
   return (
     <div>
@@ -145,6 +141,7 @@ interface IContactUsCTAProps {
   headerText?: string;
   gradientText?: string;
 }
+
 export const ContactUsCTA: FC<IContactUsCTAProps> = ({
   showButton = true,
   headerText,
@@ -152,10 +149,10 @@ export const ContactUsCTA: FC<IContactUsCTAProps> = ({
 }) => (
   <div className="footer-contact max-possible-width-constraint">
     <div className="contact-container">
-      <span className="big-header">{headerText ?? "Wanna do something"}</span>
-      <span className="big-header gradient">
-        {gradientText ?? "amazing?"}
+      <span className="big-header">
+        {headerText ?? "Wanna build something"}
       </span>
+      <span className="big-header gradient">{gradientText ?? "amazing?"}</span>
       {showButton ? (
         <a href="/contact">
           <Button
@@ -164,11 +161,19 @@ export const ContactUsCTA: FC<IContactUsCTAProps> = ({
             size="lg"
             bgColor={"black"}
             borderRadius={5}
+            pl={{
+              base: "1rem",
+              sm: "4rem",
+            }}
+            pr={{
+              base: "1rem",
+              sm: "4rem",
+            }}
             style={{
               margin: "25px 0 0 0",
               // marginLeft: 25,
-              paddingLeft: "4rem",
-              paddingRight: "4rem",
+              // paddingLeft: "4rem",
+              // paddingRight: "4rem",
             }}
           >
             Let's talk about it
@@ -176,11 +181,13 @@ export const ContactUsCTA: FC<IContactUsCTAProps> = ({
         </a>
       ) : null}
     </div>
-    <Lottie
-      style={{ cursor: "inherit" }}
-      options={defaultOptions}
-      height={400}
-      width={500}
-    />
+    <LottieContainer>
+      <Lottie
+        style={{ cursor: "inherit" }}
+        options={defaultOptions}
+        height={400}
+        width={500}
+      />
+    </LottieContainer>
   </div>
 );

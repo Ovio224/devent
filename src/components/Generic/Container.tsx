@@ -10,7 +10,7 @@ export const Container = (props) => {
         md: "7xl",
       }}
       margin="0 auto"
-      padding="0 6.5rem"
+      padding={{ base: "0 1rem", sm: "0 6.5rem" }}
       boxSizing="border-box"
       width="100%"
       {...props}

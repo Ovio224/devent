@@ -8,7 +8,7 @@ const CustomTag = ({ children }) => (
     border={"1px solid #eaeaea"}
     background="#fafafa"
     fontSize={16}
-    mr={8}
+    mr={{ base: 0, md: 8 }}
     mb={8}
     padding={"12px 24px"}
     borderRadius={40}
@@ -20,7 +20,14 @@ const CustomTag = ({ children }) => (
 
 export const Services = () => {
   return (
-    <Box alignItems="" as="section" pt="16">
+    <Box
+      alignItems=""
+      as="section"
+      pt="16"
+      pl={{ base: "0.5rem" }}
+      pr={{ base: "0.5rem" }}
+      mb={16}
+    >
       <Box
         maxW={{
           base: "xl",
@@ -31,7 +38,9 @@ export const Services = () => {
         <Stack
           direction={{
             base: "column",
-            lg: "row",
+            sm: "column",
+            lg: "column",
+            xl: "row",
           }}
           spacing={{
             base: "3rem",
@@ -41,7 +50,8 @@ export const Services = () => {
           align={{
             lg: "center",
           }}
-          justify="space-between"
+          justify={{ base: "space-between", sm: "center", xl: "space-between" }}
+          textAlign={{ base: "left", sm: "center", lg: "center", xl: "left" }}
           align-items="stretch"
         >
           <Box
@@ -61,8 +71,7 @@ export const Services = () => {
             <Heading
               as="h1"
               size="3xl"
-              // color={mode("blue.600", "blue.300")}
-              mt="2"
+              mt="sm"
               fontWeight="700"
               letterSpacing="tight"
             >
@@ -70,7 +79,7 @@ export const Services = () => {
             </Heading>
           </Box>
           <Box
-            display="flex"
+            display={{ base: "block", md: "flex" }}
             alignItems="center"
             w={{
               base: "full",
@@ -78,10 +87,15 @@ export const Services = () => {
             }}
             h={{
               base: "auto",
-              lg: "560px",
+              lg: "380px",
+              xl: "560px",
             }}
           >
-            <Box>
+            <Box
+              display={{ base: "flex", md: "block" }}
+              flexDirection="column"
+              alignItems="center"
+            >
               <CustomTag>Web Development</CustomTag>
               <CustomTag>Maintenance</CustomTag>
               <CustomTag>E-commerce Websites</CustomTag>

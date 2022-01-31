@@ -3,20 +3,21 @@ import { Box, Text } from "@chakra-ui/react";
 
 export default function Marquee() {
   return (
-    <div className="marquee-layout" id="view-main">
+    <div className="marquee-layout" id="marquee">
       <div className="marquee-content" style={{ overflow: "hidden" }}>
         <section className="marquee" style={{ overflow: "hidden" }}>
           <div className="marquee-content">
             <div className="marquee-main">
               <Box
-                alignItems="flex-start"
+                alignItems={{ base: 'center', sm: "flex-start" }}
                 flexDirection="column"
                 d="flex"
                 className="marquee-header"
+
               >
-                <h1>
+                <Text as="h1" fontSize={{ base: '10vw' }}>
                   Coming <GradientText fontSize="3.5vw">soon</GradientText>
-                </h1>
+                </Text>
                 <Text p="1rem 7rem">
                   Only <GradientText fontSize="1vw">11</GradientText> spots left
                   this year. Grab yours now.

@@ -82,18 +82,18 @@ export default function Contact() {
 
   return (
     <CustomContainer
+      mb={{ base: 30, md: 0 }}
       maxW="100vw"
       style={{
         background: "#fafafa",
         border: "1px solid #eaeaea",
       }}
     >
-      <Box as="section" pt="16" pb="24">
+      <Box as="section" pt={{ base: '6', md:"16" }} pb={{ base: '12', md:"24" }}>
         <Box
           pt="24"
           maxW={{
             base: "6xl",
-            // md: "6xl",
           }}
           mx="auto"
         >
@@ -139,13 +139,7 @@ export default function Contact() {
             </Box>
           </Stack>
         </Box>
-        <Container
-          // bg="#9DC4FB"
-          maxW="full"
-          mt={70}
-          centerContent
-          overflow="hidden"
-        >
+        <Container maxW="full" mt={70} centerContent overflow="hidden">
           <Flex mb={10}>
             <form onSubmit={submitForm}>
               <Stack spacing={10}>
@@ -160,7 +154,7 @@ export default function Contact() {
                     focusBorderColor={"#de1d8d"}
                     shadow="0px 2px 7px rgb(0 0 0 / 7%)"
                     size="lg"
-                    width="25vw"
+                    width={{ base: "sm", lg: "xl" }}
                     bg="white"
                     id="name"
                     type="name"
@@ -178,7 +172,7 @@ export default function Contact() {
                     focusBorderColor={"#de1d8d"}
                     shadow="0px 2px 7px rgb(0 0 0 / 7%)"
                     size="lg"
-                    width="25vw"
+                    width={{ base: "sm", sm: "xs", lg: "xl" }}
                     bg="white"
                     id="email"
                     type="email"
@@ -208,7 +202,7 @@ export default function Contact() {
                     focusBorderColor={"#de1d8d"}
                     shadow="0px 2px 7px rgb(0 0 0 / 7%)"
                     size="lg"
-                    width="25vw"
+                    width={{ base: "sm", lg: "xl" }}
                     height="20vh"
                     bg="white"
                     id="message"

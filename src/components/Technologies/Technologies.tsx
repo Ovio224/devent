@@ -9,9 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-// import '../../../technologies/hotjar.svg'
 
-// Replace test data with your own
 const features = [
   { title: "React", src: "../../../technologies/react.svg" },
   { title: "Figma", src: "../../../technologies/figma.svg" },
@@ -36,7 +34,7 @@ export default function Technologies() {
         maxW={"3xl"}
         textAlign={"center"}
       >
-        <Heading data-cursor="-opaque" letterSpacing="tight" as="h1" size="3xl">
+        <Heading data-cursor="-opaque" letterSpacing="tight" as="h1" fontSize={{ base: '3xl', md:"6xl" }}>
           Technologies we use to build your digital experience
         </Heading>
       </Stack>

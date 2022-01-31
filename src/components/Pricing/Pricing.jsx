@@ -23,7 +23,7 @@ export const Pricing = () => {
         }}
         mx="auto"
         px={{
-          base: "6",
+          base: "2",
           md: "8",
         }}
       >
@@ -35,6 +35,7 @@ export const Pricing = () => {
           }}
           maxW="2xl"
           mx="auto"
+          alignItems={{ base: "center", md: "none" }}
         >
           <Heading
             as="h1"
@@ -70,6 +71,8 @@ export const Pricing = () => {
             base: "column",
             lg: "row",
           }}
+          flexWrap={{ base: "wrap", md: "nowrap" }}
+          alignContent={{ base: "center", md: "center" }}
         >
           <Flex
             direction={{
@@ -87,6 +90,7 @@ export const Pricing = () => {
             mt="10"
             bg={mode("white", "gray.700")}
             rounded="5px"
+            mb={{ base: "2rem" }}
           >
             <PricingCard
               cardIdx="1"

@@ -131,6 +131,7 @@ export const Feature = (props: FeatureProps) => {
     <Stack
       spacing={{ base: "3", md: "6" }}
       direction={{ base: "column", md: "row" }}
+      alignItems={{ base: "center", md: "inherit" }}
     >
       <Box fontSize="5xl">{icon}</Box>
       <Stack spacing="1">

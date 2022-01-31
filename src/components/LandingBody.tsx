@@ -10,11 +10,34 @@ import { ColumnThree } from "./Landing/components/ColumnThree";
 import { Pricing } from "./Pricing/Pricing";
 import Technologies from "./Technologies/Technologies";
 import Marquee from "./Marquee";
+import { device } from "../constants";
 
 const HeadingContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media ${device.mobileS} {
+    align-items: center !important;
+  }
+
+  @media ${device.tablet} {
+    align-items: flex-start !important;
+  }
+`;
+
+const HeadingContainerEnd = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media ${device.mobileS} {
+    align-items: center !important;
+  }
+
+  @media ${device.tablet} {
+    align-items: flex-end !important;
+  }
 `;
 
 export const LandingBody = () => {
@@ -29,7 +52,7 @@ export const LandingBody = () => {
           </Heading>
         </HeadingContainer>
         <Column />
-        <HeadingContainer style={{ alignItems: "flex-end" }}>
+        <HeadingContainerEnd style={{ alignItems: "flex-end" }}>
           <NumberedHeader
             fontSize="2rem"
             startColor={"#7928ca"}
@@ -40,7 +63,7 @@ export const LandingBody = () => {
           <Heading as="h1" size="2xl">
             Development
           </Heading>
-        </HeadingContainer>
+        </HeadingContainerEnd>
         <ColumnInverse />
         {/*<Pricing />*/}
         <HeadingContainer>

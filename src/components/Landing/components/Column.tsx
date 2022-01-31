@@ -37,13 +37,6 @@ export const Column = () => {
           base: "xl",
           md: "7xl",
         }}
-        // mx="auto"
-        px={
-          {
-            // base: '6',
-            // md: '8',
-          }
-        }
       >
         <Stack
           spacing={{
@@ -63,6 +56,7 @@ export const Column = () => {
             }}
           >
             <Lottie
+              className="lottie"
               style={{ cursor: "inherit" }}
               options={defaultOptions}
               height={400}
@@ -91,12 +85,14 @@ export const Column = () => {
               </GradientText>
             </Heading>
             <Text fontSize="lg" mt="6" color={mode("gray.600", "gray.400")}>
-              Creating eye-catching and <ColoredSpan>memorable designs</ColoredSpan> as well as meaningful
+              Creating eye-catching and{" "}
+              <ColoredSpan>memorable designs</ColoredSpan> as well as meaningful
               user experience.
             </Text>
             <Text fontSize="lg" mt="6" color={mode("gray.600", "gray.400")}>
-              This is the only way we can offer our clients <ColoredSpan>premium services</ColoredSpan>,
-              with professional expertise and tailored results.
+              This is the only way we can offer our clients{" "}
+              <ColoredSpan>premium services</ColoredSpan>, with professional
+              expertise and tailored results.
             </Text>
           </Box>
         </Stack>
@@ -143,6 +139,7 @@ export const Feature = (props: FeatureProps) => {
     <Stack
       spacing={{ base: "3", md: "6" }}
       direction={{ base: "column", md: "row" }}
+      alignItems={{ base: "center", md: "inherit" }}
     >
       <Box fontSize="5xl">{icon}</Box>
       <Stack spacing="1">

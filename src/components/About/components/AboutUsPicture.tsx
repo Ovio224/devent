@@ -19,8 +19,14 @@ export default function AboutUsPicture() {
         md: "8",
       }}
       display="flex"
-      justifyContent="space-between"
+      // justifyContent="space-between"
       alignItems="center"
+      justifyContent={{
+        base: "space-between",
+        sm: "center",
+        xl: "space-between",
+      }}
+      textAlign={{ base: "left", sm: "center", lg: "center", xl: "left" }}
     >
       <Flex
         direction="column"
@@ -29,7 +35,10 @@ export default function AboutUsPicture() {
           lg: "520px",
         }}
         align={{
-          base: "flex-start",
+          base: "center",
+          sm: "center",
+          lg: "center",
+          xl: "flex-start",
         }}
       >
         <GradientText
@@ -63,12 +72,11 @@ export default function AboutUsPicture() {
         </Text>
       </Flex>
       <Image
+        display={{ base: "none", sm: "none", lg: "none", xl: "block" }}
         shadow="0 8px 30px rgba(0,0,0,0.12);"
         borderRadius={5}
         border="1px solid #eaeaea"
         data-cursor="-opaque"
-        // borderRadius="full"
-        // boxSize="600px"
         width={450}
         src="../../../../ovi.png"
         alt="Ovidiu C. - DEVENT Founder"

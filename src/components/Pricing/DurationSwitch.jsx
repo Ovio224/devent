@@ -89,7 +89,7 @@ export const DurationSwitcher = (props) => {
           </RadioButton>
         </Flex>
       </AnimateSharedLayout>
-      <Box color="black" pos="absolute" right="-7rem" top="6">
+      <Box display={{ base: 'none', sm: 'none', md: 'none', lg: 'none', xl: 'block' }} color="black" pos="absolute" right="-7rem" top="6">
         <Text lineHeight="1" fontWeight="bold">
           Save 18%
         </Text>

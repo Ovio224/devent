@@ -1,6 +1,4 @@
-import SmoothScrollbar from "smooth-scrollbar";
 import ScrollTriggerPlugin from "./smooth-scrollbar/ScrollTriggerPlugin";
-import SoftScrollPlugin from "./smooth-scrollbar/SoftScrollPlugin";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Swiper from "swiper";
@@ -11,13 +9,6 @@ export default class MarqueeEffect {
   }
 
   init() {
-    const view = document.querySelector("#app");
-    SmoothScrollbar.init(view, {
-      renderByPixels: false,
-      damping: 0.02,
-      continuousScrolling: true,
-    });
-
     const marquee = document.querySelectorAll(".marquee");
 
     marquee.forEach((e) => {

@@ -11,7 +11,6 @@ import {
   PopoverTrigger,
   Stack,
   Text,
-  useBreakpointValue,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -63,30 +62,43 @@ export const Header = () => {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Box marginLeft={{ md: "20%", xl: "21.8%", xxl: "28.6%;" }}>
-          <Flex
-            flex={{ base: 1 }}
-            ml={{ sm: '11.7%' }}
-            alignItems={{ base: "center", md: "center", sm: "flex-start" }}
-            justify={{ base: "center", md: "start" }}
-          >
-            <Text
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              fontFamily={"heading"}
-              color={useColorModeValue("gray.800", "white")}
-            >
-              <a href="/">
-                <GradientText startColor="#FF4D4D" endColor="#F9CB28">
-                  devent.studio
-                </GradientText>
-              </a>
-            </Text>
-
-            <Flex display={{ base: "none", md: "flex" }}>
-              <DesktopNav />
-            </Flex>
+        <a href="/">
+          <GradientText startColor="#FF4D4D" endColor="#F9CB28">
+            devent.studio
+          </GradientText>
+        </a>
+        <Flex
+          flex={{ base: 1 }}
+          justify={{ base: "center", md: "center" }}
+          ml={{ base: 0, md: "105px" }}
+          mr={{ base: 0, md: "166px" }}
+        >
+          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+            <DesktopNav />
           </Flex>
-        </Box>
+        </Flex>
+        <Stack
+          mr={{ base: 0, md: 7 }}
+          flex={{ base: 1, md: 0 }}
+          justify={"flex-end"}
+          direction={"row"}
+          spacing={6}
+        >
+          <RouterLink to="/contact">
+            <Button
+              as={"a"}
+              colorScheme="pink"
+              size="md"
+              bgColor={"black"}
+              paddingRight={5}
+              paddingLeft={5}
+              borderRadius={5}
+            >
+              Contact
+            </Button>
+          </RouterLink>
+        </Stack>
+        {/*</Box>*/}
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -102,12 +114,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack
-      ml={{ base: '20rem', sm: '40rem', lg: "60rem", xl: "88rem" }}
-      alignItems={{ base: "center" }}
-      direction={"row"}
-      spacing={4}
-    >
+    <Stack alignItems={{ base: "center" }} direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -115,9 +122,8 @@ const DesktopNav = () => {
               <RouterLink to={navItem.href ?? "#"}>
                 <Link
                   p={2}
-                  // href={navItem.href ?? "#"}
                   fontSize={"lg"}
-                  fontWeight={500}
+                  fontWeight={800}
                   color={linkColor}
                   _hover={{
                     textDecoration: "none",
@@ -148,21 +154,6 @@ const DesktopNav = () => {
           </Popover>
         </Box>
       ))}
-      {/*<Box>*/}
-      <RouterLink to="/contact">
-        <Button
-          as={"a"}
-          colorScheme="pink"
-          size="md"
-          bgColor={"black"}
-          paddingRight={5}
-          paddingLeft={5}
-          borderRadius={5}
-        >
-          Contact
-        </Button>
-      </RouterLink>
-      {/*</Box>*/}
     </Stack>
   );
 };
@@ -212,6 +203,7 @@ const MobileNav = () => {
       bg={useColorModeValue("white", "gray.800")}
       p={4}
       display={{ md: "none" }}
+      pt={"6rem"}
     >
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
@@ -254,7 +246,6 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
         <Stack
-          mt={2}
           pl={4}
           borderLeft={1}
           borderStyle={"solid"}

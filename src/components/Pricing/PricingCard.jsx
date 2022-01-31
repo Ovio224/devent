@@ -58,12 +58,14 @@ export const PricingCard = (props) => {
     >
       <Box
         m={{
-          base: "-3rem -3rem 2rem",
+          base: "-3rem -2rem 1rem",
+          sm: "-3rem -3rem 2rem",
           // md: "2rem -2rem 1rem",
         }}
         p={{
-          base: "1rem 4rem",
-          md: "4 16",
+          base: "0",
+          md: "1rem 4rem",
+          lg: "4 16",
         }}
         borderBottom={"1px solid #eaeaea"}
         borderRadius={5}
@@ -81,19 +83,21 @@ export const PricingCard = (props) => {
         <Box mt="2">
           <Text
             fontSize={{
-              base: "4xl",
+              base: "2xl",
               md: "3xl",
             }}
+            pt={{ base: "16px" }}
             color={cardIdx === "1" ? "black" : "#d3e5ff"}
           >
             {name}
           </Text>
           <Text
             fontSize={{
-              base: "6xl",
+              base: "3xl",
               md: "7xl",
             }}
             fontWeight="700"
+            mb={{ base: "16px" }}
           >
             {price}
           </Text>
@@ -112,7 +116,7 @@ export const PricingCard = (props) => {
       <Box
         textAlign="center"
         borderTop="1px solid #eaeaea"
-        margin="2rem -3rem -3rem -3rem"
+        margin={{ base: "2rem -2rem -4rem", md: "2rem -3rem -5rem -3rem" }}
         bg="white"
       >
         <a href="/contact">
@@ -129,7 +133,7 @@ export const PricingCard = (props) => {
                 }}
               />
             }
-            width={"xs"}
+            width={{ base: "3xs", sm: "xs" }}
             // padding="0 8rem 0 8rem"
             my="8"
             size="lg"
